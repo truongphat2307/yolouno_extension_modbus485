@@ -1,5 +1,5 @@
 {
-    "name": "MODBUS  RS485",
+    "name": "MODBUS RS485",
     "description": "Mục mở rộng dùng cho cảm biến Modbus485",
     "libs": [
         "modbus_master.py"

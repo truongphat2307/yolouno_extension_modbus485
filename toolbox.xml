@@ -1,32 +1,17 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
-  <category name="MODBUS  RS485" colour="#cb2026" icon="road">\
-    <block type="modbus_init"/>
-    <block type="modbus_read_input_registers">
-      <value name="SLAVE_ID">
-        <shadow type="math_number">
-          <field name="NUM">0</field>
-        </shadow>
-      </value>
-      <value name="ADDRESS">
-        <shadow type="math_number">
-          <field name="NUM">0</field>
-        </shadow>
-      </value>
-      <value name="QUANTITY">
-        <shadow type="math_number">
-          <field name="NUM">0</field>
-        </shadow>
-      </value>
+  <category name="MODBUS RS485" colour="#cb2026" icon="road">
+    <block type="modbus_init">
+      <field name="BAUD">9600</field>
     </block>
-    <block type="modbus_read_holding_registers"> 
+    <block type="modbus_read_holding_registers">
       <value name="SLAVE_ID">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </shadow>
       </value>
       <value name="FUNC_CODE">
         <shadow type="math_number">
-          <field name="NUM">0x03</field>
+          <field name="NUM">3</field>
         </shadow>
       </value>
       <value name="ADDRESS">
@@ -36,14 +21,14 @@
       </value>
       <value name="QUANTITY">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </shadow>
       </value>
     </block>
-    <block type="modbus_write_single_register"> 
+    <block type="modbus_read_input_registers">
       <value name="SLAVE_ID">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </shadow>
       </value>
       <value name="ADDRESS">
@@ -51,16 +36,22 @@
           <field name="NUM">0</field>
         </shadow>
       </value>
-      <value name="VALUE">
+      <value name="QUANTITY">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </shadow>
       </value>
     </block>
-    <block type="modbus_read_float" >
+    <block type="modbus_read_float">
+      <field name="BYTE_ORDER">big</field>
       <value name="SLAVE_ID">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="FUNC_CODE">
+        <shadow type="math_number">
+          <field name="NUM">3</field>
         </shadow>
       </value>
       <value name="REGISTER_ADDR">
@@ -68,22 +59,16 @@
           <field name="NUM">0</field>
         </shadow>
       </value>
-      <value name="FUNC_CODE">
-        <shadow type="math_number">
-          <field name="NUM">0</field>
-        </shadow>
-      </value>
-      <value name="BYTE_ORDER">little</value>
     </block>
     <block type="modbus_read_raw_bytes">
       <value name="SLAVE_ID">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </shadow>
       </value>
       <value name="FUNC_CODE">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">3</field>
         </shadow>
       </value>
       <value name="REGISTER_ADDR">
@@ -92,6 +77,23 @@
         </shadow>
       </value>
       <value name="REGISTER_COUNT">
+        <shadow type="math_number">
+          <field name="NUM">2</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="modbus_write_single_register">
+      <value name="SLAVE_ID">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="ADDRESS">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="VALUE">
         <shadow type="math_number">
           <field name="NUM">0</field>
         </shadow>
